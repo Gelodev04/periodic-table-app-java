@@ -11,6 +11,7 @@ public class Quiz {
     private Random random;
     private int score;
     private int totalQuestions;
+    private static final int MAX_QUESTIONS = 30;
 
     // Interface for different question types (Abstraction)
     public interface Question {
@@ -134,11 +135,35 @@ public class Quiz {
         System.out.println("  PERIODIC TABLE QUIZ");
         System.out.println("=".repeat(60));
         
-        System.out.print("How many questions would you like? ");
-        int numQuestions = scanner.nextInt();
-        scanner.nextLine(); // consume newline
+        // Reset score for new quiz
+        score = 0;
+        totalQuestions = 0;
+        
+        System.out.print("How many questions would you like? (Maximum: " + MAX_QUESTIONS + ") ");
+        int numQuestions = 0;
+        
+        try {
+            numQuestions = scanner.nextInt();
+            scanner.nextLine(); // consume newline
+            
+            // Validate and limit the number of questions
+            if (numQuestions < 1) {
+                System.out.println("\nInvalid input! Minimum 1 question required. Setting to 1.");
+                numQuestions = 1;
+            } else if (numQuestions > MAX_QUESTIONS) {
+                System.out.println("\nMaximum limit is " + MAX_QUESTIONS + " questions. Setting to " + MAX_QUESTIONS + ".");
+                numQuestions = MAX_QUESTIONS;
+            }
+        } catch (Exception e) {
+            System.out.println("\nInvalid input! Defaulting to 10 questions.");
+            scanner.nextLine(); // clear invalid input
+            numQuestions = 10;
+        }
 
         Element[] allElements = periodicTable.getAllElements();
+        
+        System.out.println("\nStarting quiz with " + numQuestions + " question(s)...");
+        System.out.println("-".repeat(60));
 
         for (int i = 0; i < numQuestions; i++) {
             Element randomElement = allElements[random.nextInt(allElements.length)];
