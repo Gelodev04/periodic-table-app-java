@@ -1,7 +1,3 @@
-/**
- * Element class demonstrating Encapsulation
- * All fields are private and accessed through public methods
- */
 public class Element {
     // Private fields - Encapsulation
     private String symbol;

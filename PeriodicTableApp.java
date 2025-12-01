@@ -1,9 +1,5 @@
 import java.util.Scanner;
 
-/**
- * Main application class for Periodic Table Learning System
- * Demonstrates all OOP principles through the complete application
- */
 public class PeriodicTableApp {
     private PeriodicTable periodicTable;
     private Scanner scanner;

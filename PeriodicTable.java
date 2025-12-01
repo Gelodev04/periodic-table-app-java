@@ -1,7 +1,3 @@
-/**
- * PeriodicTable class - stores and manages all elements
- * Demonstrates data structure and search capabilities
- */
 public class PeriodicTable {
     private Element[] elements;
     private int size;

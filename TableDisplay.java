@@ -1,10 +1,5 @@
 import java.util.Scanner;
 
-/**
- * Class demonstrating Inheritance - extends ElementDisplay
- * Shows all elements in a table format with pagination
- * Demonstrates Polymorphism through method overriding
- */
 public class TableDisplay extends ElementDisplay implements ElementInfo {
     private Scanner scanner;
     private static final int ELEMENTS_PER_PAGE = 25;

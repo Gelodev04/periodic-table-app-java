@@ -1,10 +1,5 @@
 import java.util.Scanner;
 
-/**
- * Class demonstrating Inheritance - extends ElementDisplay
- * Allows searching for elements by various criteria
- * Demonstrates Polymorphism through method overriding
- */
 public class SearchDisplay extends ElementDisplay {
     private Scanner scanner;
 

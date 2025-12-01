@@ -1,7 +1,3 @@
-/**
- * Abstract class demonstrating Abstraction and serves as base for Inheritance
- * Different display types will extend this class and implement the abstract methods
- */
 public abstract class ElementDisplay {
     protected PeriodicTable periodicTable;
 

@@ -1,10 +1,6 @@
 import java.util.Random;
 import java.util.Scanner;
 
-/**
- * Quiz class demonstrating Polymorphism
- * Can work with different types of questions through the Question interface
- */
 public class Quiz {
     private PeriodicTable periodicTable;
     private Scanner scanner;
