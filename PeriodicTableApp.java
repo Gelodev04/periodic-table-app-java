@@ -21,8 +21,8 @@ public class PeriodicTableApp {
 
     public void run() {
         System.out.println("╔══════════════════════════════════════════════════════════╗");
-        System.out.println("║     PERIODIC TABLE LEARNING SYSTEM                      ║");
-        System.out.println("║     Learn about Elements, Search, and Take Quizzes!    ║");
+        System.out.println("║     PERIODIC TABLE LEARNING SYSTEM                       ║");
+        System.out.println("║     Learn about Elements, Search, and Take Quizzes!      ║");
         System.out.println("╚══════════════════════════════════════════════════════════╝");
         
         boolean running = true;
